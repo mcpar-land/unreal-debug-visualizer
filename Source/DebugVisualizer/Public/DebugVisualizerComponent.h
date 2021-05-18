@@ -51,38 +51,38 @@ struct FDebugVizLine
 	FVector End = FVector(0, 0, 100);
 };
 
-USTRUCT(BlueprintType)
-struct FDebugVizCube
-{
-	GENERATED_BODY()
+// USTRUCT(BlueprintType)
+// struct FDebugVizCube
+// {
+// 	GENERATED_BODY()
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FDebugVizStyle Style;
+// 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+// 	FDebugVizStyle Style;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FVector Center = FVector(0, 0, 0);
+// 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+// 	FVector Center = FVector(0, 0, 0);
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FVector Bounds = FVector(100, 100, 100);
-};
+// 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+// 	FVector Bounds = FVector(100, 100, 100);
+// };
 
-USTRUCT(BlueprintType)
-struct FDebugVizCylinder
-{
-	GENERATED_BODY()
+// USTRUCT(BlueprintType)
+// struct FDebugVizCylinder
+// {
+// 	GENERATED_BODY()
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FDebugVizStyle Style;
+// 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+// 	FDebugVizStyle Style;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FVector Center = FVector(0, 0, 0);
+// 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+// 	FVector Center = FVector(0, 0, 0);
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = "0.0", UIMin = "0.0"))
-	float Radius = 50;
+// 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = "0.0", UIMin = "0.0"))
+// 	float Radius = 50;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = "0.0", UIMin = "0.0"))
-	float Height = 100;
-};
+// 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = "0.0", UIMin = "0.0"))
+// 	float Height = 100;
+// };
 
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class DEBUGVISUALIZER_API UDebugVisualizerComponent : public UActorComponent
@@ -107,11 +107,11 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Debug Shapes", meta = (AllowPrivateAccess = true))
 	TArray<FDebugVizLine> Lines;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Debug Shapes", meta = (AllowPrivateAccess = true))
-	TArray<FDebugVizCube> Cubes;
+	// UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Debug Shapes", meta = (AllowPrivateAccess = true))
+	// TArray<FDebugVizCube> Cubes;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Debug Shapes", meta = (AllowPrivateAccess = true))
-	TArray<FDebugVizCylinder> Cylinders;
+	// UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Debug Shapes", meta = (AllowPrivateAccess = true))
+	// TArray<FDebugVizCylinder> Cylinders;
 
 	FVector DebugPosition(FDebugVizStyle style, FVector PossiblyRelative) const;
 };
